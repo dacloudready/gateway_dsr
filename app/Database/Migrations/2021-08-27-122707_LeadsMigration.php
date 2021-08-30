@@ -17,7 +17,7 @@ class LeadsMigration extends Migration
 				'null'				=> false
 			],
 
-			'name' => [
+			'first_name' => [
 				'type'				=>	'varchar',
 				'constraint'		=>	30,	
 				'null'				=> false

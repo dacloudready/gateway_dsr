@@ -1,0 +1,2 @@
+ERROR - 2021-08-30 10:17:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL,
+	ADD `last_name` varchar NULL' at line 2

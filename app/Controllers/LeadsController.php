@@ -35,13 +35,17 @@ class LeadsController extends BaseController
 		try {
 			//code...
 			$user_found = $this->leads->find($id);
+
 			if($user_found)
 			{
+				$data['page_title'] = 'DSR Details';
 				$data['user'] = $user_found;
+				
 				return view('leads/view', $data);
 			}else{
 				return "User not found.";
 			}
+
 		} catch (\Throwable $th) {
 			//throw $th;
 			die($th->getMessage());

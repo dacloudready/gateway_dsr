@@ -1,52 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<body>
-<div class="container">
-<table class="table table-striped table-hovered table-bordered">
-    <thead>
-        <th>ID</th>
-        <th>Date</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Contact</th>
-        <th>Email</th>
-        <th>Unit</th>
-        <th>Model</th>
-        <th>Branch</th>
-        <th>Source</th>
-    </thead>
-    <tbody>
-        
-                <tr>
-                    <td><a href="<?=base_url('view-lead')."/".$user['id'];?>"><?=$user['id'];?></a></td>
-                    <td><?=$user['created_at'];?></td>
-                    <td><?=$user['name'];?></td>
-                    <td><?=$user['address'];?></td>
-                    <td><?=$user['contact'];?></td>
-                    <td><?=$user['email']; ?></td>
-                    <td><?=$user['desired_unit_brand']; ?></td>
-                    <td><?=$user['desired_unit_model'];?></td>
-                    <td><?=$user['visited_branch'];?></td>
-                    <td><?=$user['source'];?></td>
-                </tr>
-    
-        
-    </tbody>
-    
+<?=$this->extend('layout/template'); ?>
 
-</table>
+
+<?=$this->section('content');?>
+
+<!-- HEADER -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"><?=$page_title?></h1>
+    </div>
 </div>
-</body>
-</html>
+
+<!-- CONTENT -->
+<div class="row">
+    <div class="col-lg-7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-user"></i> Client Information   
+            </div>
+            
+            <div class="panel-body">
+                <form class="form-horizontal" action="" method="POST" role="form">
+                    <div class="form-group">
+                        <label class="col-xs-3">Name:</label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="name" id="name" value="<?= "{$user['first_name']} {$user['middle_name']} {$user['last_name']} "; ?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+                        
+                        
+                    <div class="form-group">
+                        <label class="col-xs-3">Address:</label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="address" id="address" value="<?=$user['address']?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>  
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3">Contact:</label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="contact" id="contact" value="<?=$user['contact']?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3">Email: </label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="email" id="email" value="<?=$user['email']?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3">Branch Visited: </label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="branch" id="branch" value="<?=$user['visited_branch']?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-xs-3">Preferred Brand: </label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="brand" id="brand" value="<?=$user['desired_unit_brand'] ?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3">Model: </label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="model" id="model" value="<?=$user['desired_unit_model'] ?>" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3">Agent: </label>
+                        <div class="col-xs-9">
+                            <input class="form-control input-sm"  type="text" name="agent" id="agent" value="" />
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3">Source: </label>
+                        <div class="col-xs-9">
+                            <input class="radio-inline" type="radio" name="source" id="source" checked value="<?=$user['source'];?>" /> <?=$user['source'];?>
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
 
 
+                </form>
+            </div>
+        
+        </div>
+    </div>
 
+    
+</div>
 
+<?=$this->endSection();?>
+
+<?=$this->section('js');?>
+<?=$this->endSection();?>

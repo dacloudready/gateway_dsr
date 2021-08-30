@@ -7,32 +7,32 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Startmin - Bootstrap Admin Theme</title>
+    <title>DSR Monitoring - Gateway Group</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url();?>/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <link href="<?=base_url();?>/css/metisMenu.min.css" rel="stylesheet">
 
      <!-- DataTables CSS -->
-     <link href="css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+     <link href="<?=base_url();?>/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
-    <link href="css/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="<?=base_url();?>/css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
 
     <!-- Timeline CSS -->
-    <link href="css/timeline.css" rel="stylesheet">
+    <link href="<?=base_url();?>/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/startmin.css" rel="stylesheet">
+    <link href="<?=base_url();?>/css/startmin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/morris.css" rel="stylesheet">
+    <link href="<?=base_url();?>/css/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url();?>/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,7 +60,7 @@
 
         <!-- Top Navigation: Left Menu -->
         <ul class="nav navbar-nav navbar-left navbar-top-links">
-            <li><a href="#"><i class="fa fa-home fa-fw"></i> Daily Sales Report(DSR)</a></li>
+            <li><a href="#"><i class="fa fa-table fa-fw"></i> Daily Sales Report(DSR)</a></li>
         </ul>
 
         <!-- Top Navigation: Right Menu -->
@@ -98,7 +98,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="active"><i class="fa fa-tasks"></i> DSR Summary</a>
+                        <a href="#" class="active"><i class="fa fa-table"></i> DSR Summary</a>
                     </li>
                     <!--<li>
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
@@ -136,20 +136,20 @@
 </div>
 
 <!-- jQuery -->
-<script src="js/jquery.min.js"></script>
+<script src="<?=base_url();?>/js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="<?=base_url();?>/js/bootstrap.min.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="js/metisMenu.min.js"></script>
+<script src="<?=base_url();?>/js/metisMenu.min.js"></script>
 
 <!-- DataTables JavaScript -->
-<script src="js/dataTables/jquery.dataTables.min.js"></script>
-<script src="js/dataTables/dataTables.bootstrap.min.js"></script>
+<script src="<?=base_url();?>/js/dataTables/jquery.dataTables.min.js"></script>
+<script src="<?=base_url();?>/js/dataTables/dataTables.bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/startmin.js"></script>
+<script src="<?=base_url();?>/js/startmin.js"></script>
 
 <?=$this->renderSection('js');?>
 </body>
